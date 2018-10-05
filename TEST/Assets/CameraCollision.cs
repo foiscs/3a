@@ -25,6 +25,9 @@ public class CameraCollision : MonoBehaviour
         if(Physics.Linecast(transform.parent.position,desiredCameraPos,out hit,9))
         {
             distance = Mathf.Clamp((hit.distance * 0.9f), minDistance, maxDistance);
+
+            Debug.Log(hit.transform.name);
+            Debug.DrawLine(transform.parent.position, hit.point, Color.red);
         }
         else
         {
@@ -32,8 +35,7 @@ public class CameraCollision : MonoBehaviour
         }
         transform.localPosition = Vector3.Lerp(transform.localPosition, dollyDir * distance, Time.deltaTime * smooth);
 
-        Debug.Log(hit.transform.name);
-        Debug.DrawLine(transform.parent.position, hit.point, Color.red);
+
     }
 
 }
