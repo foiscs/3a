@@ -11,6 +11,6 @@ public class JumpTrigger : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-            player.JumpTriggerCount--;
+            player.JumpTriggerCount-- ;
     }
 }
