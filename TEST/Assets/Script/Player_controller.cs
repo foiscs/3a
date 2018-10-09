@@ -57,7 +57,7 @@ public class Player_controller : MonoBehaviour
         }
         MoveDirection = (v * hips.TransformDirection(Vector3.forward)).normalized;
 
-        if (Input.GetKeyDown(KeyCode.Space) && JumpTriggerCount == 2)
+        if (Input.GetKeyDown(KeyCode.Space) && JumpTriggerCount >= 2)
         {
             rb.velocity += new Vector3(0, JumpPower, 0);
             JumpTriggerCount = 0;
