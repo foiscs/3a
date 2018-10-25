@@ -17,7 +17,7 @@ public class Block : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("lag") && manager.playing && !touch)
+        if (collision.gameObject.CompareTag("lag") && manager.isPlaying && !touch)
         {
             touch = true;
             StartCoroutine(Down());

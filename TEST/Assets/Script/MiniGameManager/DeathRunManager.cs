@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathRunManager : MonoBehaviour
+public class DeathRunManager : MinigameManager
 {
     private Vector3 pos;
 
     public Texture2D image;
     public GameObject plane;
     public GameObject Spwan;
-
-    public bool playing;
-    public bool four_People;
-    public bool eight_People;
 
     public float distance;
     void Start()
@@ -31,14 +27,14 @@ public class DeathRunManager : MonoBehaviour
                 }
             }
         }
-        else if (four_People)
+        else if (four_Players)
         {
             float MaxValue = GreatestCommonDivisor(image.width, image.height);
             int width = image.width / (int)Mathf.Round(MaxValue) * 10;
 
             int height = image.height / (int)Mathf.Round(MaxValue) * 10;
         }
-        else if (eight_People)
+        else if (eight_Players)
         {
             float MaxValue = GreatestCommonDivisor(image.width, image.height);
             int width = image.width / (int)Mathf.Round(MaxValue) * 10;
