@@ -30,15 +30,13 @@ public class Player_controller : MonoBehaviour
             this.enabled = false;
         }
     }
-
-    // Use this for initialization
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         caps = GetComponent<CapsuleCollider>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         float v = Input.GetAxisRaw("Vertical");
